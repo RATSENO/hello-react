@@ -1,7 +1,7 @@
+import MyComponent from "./MyComponent";
 import "./App.css";
 
 function App() {
-  const name = "리액트";
-  return <div className="react">{name}</div>;
+  return <MyComponent></MyComponent>
 }
 export default App;
