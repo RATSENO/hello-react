@@ -1,8 +1,16 @@
 import "./App.css";
-import Say from "./Say";
+import Test from "./antd-test/DatePicker";
+import TestGrid from "./antd-test/TestGrid";
+import TestCheckBox from "./antd-test/TestCheckBox";
 
 const App = () => {
-  return <Say></Say>
+  return (
+    <>
+      <Test></Test>
+      <TestGrid></TestGrid>
+      <TestCheckBox></TestCheckBox>
+    </>
+  );
 }
 
 export default App;
