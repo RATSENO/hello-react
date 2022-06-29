@@ -5,6 +5,26 @@ class EventPractice extends Component {
   state = {
     message: "",
   };
+
+  constructor(props) {
+    super(props);
+    this.handleChage = this.handleChage.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChage(e) {
+    this.setState({
+      message: e.target.value,
+    });
+  }
+
+  handleClick() {
+    alert(this.state.message);
+    this.setState({
+      message: "",
+    });
+  }
+
   render() {
     return (
       <div>
@@ -13,22 +33,9 @@ class EventPractice extends Component {
           type="text"
           name="message"
           value={this.state.message}
-          onChange={(e) => {
-            this.setState({
-              message: e.target.value,
-            });
-          }}
+          onChange={this.handleChage}
         ></input>
-        <button
-          onClick={() => {
-            alert(this.state.message);
-            this.setState({
-              message: "",
-            });
-          }}
-        >
-          확인
-        </button>
+        <button onClick={this.handleClick}>확인</button>
       </div>
     );
   }
