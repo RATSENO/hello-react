@@ -1,4 +1,3 @@
-import { message } from "antd";
 import React, { Component } from "react";
 
 class EventPractice extends Component {
@@ -6,24 +5,18 @@ class EventPractice extends Component {
     message: "",
   };
 
-  constructor(props) {
-    super(props);
-    this.handleChage = this.handleChage.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleChage(e) {
+  handleChage = (e) => {
     this.setState({
       message: e.target.value,
     });
-  }
+  };
 
-  handleClick() {
+  handleClick = () => {
     alert(this.state.message);
     this.setState({
       message: "",
     });
-  }
+  };
 
   render() {
     return (
