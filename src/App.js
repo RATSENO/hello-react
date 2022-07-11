@@ -1,10 +1,10 @@
 import "./App.css";
-import EventPractice from "./EventPractice";
+import EventPracticeF from "./EventPracticeF";
 
 const App = () => {
   return (
     <>
-      <EventPractice></EventPractice>
+      <EventPracticeF></EventPracticeF>
     </>
   );
 }
