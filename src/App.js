@@ -1,12 +1,16 @@
-import "./App.css";
-import ValidationSample from "./ValidationSample";
+import React, { Component } from "react";
+import ScrollBox from "./ScrollBox";
 
-const App = () => {
-  return (
-    <>
-      <ValidationSample></ValidationSample>
-    </>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <ScrollBox ref={(ref) => { this.scrollbox = ref }}></ScrollBox>
+        <button onClick={() => { this.scrollbox.scrollToBottom() }}>맨 밑으로</button>
+      </div>
+    )
+  }
 }
+
 
 export default App;
